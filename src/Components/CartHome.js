@@ -16,10 +16,10 @@ const CartHome = () => {
     console.log("product selected", selectedProduct);
   };
 
-  // const totalPriceOfCart = cart.reduce(
-  //   (acc, curr) => acc + curr.price * curr.qty,
-  //   0
-  // );
+  const totalPriceOfCart = cart.reduce(
+    (acc, curr) => acc + curr.price * curr.qty,
+    0
+  );
   return (
     <>
       {toShow ? (
@@ -36,9 +36,10 @@ const CartHome = () => {
             Proceed to CheckOut
           </Link>
 
-          {/* <h4>
-            TOTOAL PRODUCT: {cart.length} TOTAL PRICE: ₹{cartValue.toFixed(0)}
-          </h4> */}
+          <h4>
+            TOTOAL PRODUCT: {cart.length} TOTAL PRICE: ₹
+            {totalPriceOfCart.toFixed(0)}
+          </h4>
           {cart &&
             cart.map((products) => (
               <ProductCard
