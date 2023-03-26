@@ -1,0 +1,5 @@
+@import "./ProductCard/ProductCard.css";
+@import "./ProductsPage/productsHome.css";
+@import "./ProductDescription/ProductDescripton.css";
+
+@import "./Loader/loader.css";

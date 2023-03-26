@@ -1,0 +1,27 @@
+.cards {
+  width: 100%;
+  display: flex;
+  justify-content: space-between;
+  /* padding: 20px; */
+  margin: 0;
+  flex-direction: column;
+}
+.product-card {
+  box-shadow: 2px 40px 50px black;
+  display: flex;
+}
+.card-image {
+  height: 250px;
+  width: 250px;
+  object-fit: fill;
+  opacity: 0.9;
+  cursor: pointer;
+}
+
+.product-detais {
+  display: flex;
+  flex-direction: column;
+  margin-left: 20px;
+  align-items: baseline;
+  justify-content: center;
+}

@@ -1,0 +1,75 @@
+hr {
+  height: 2px;
+  color: aquamarine;
+}
+
+.back-button {
+  display: flex;
+  margin-left: 30px;
+  cursor: pointer;
+}
+
+.desc-card {
+  display: flex;
+  margin: 5px;
+  padding: 5px;
+  justify-content: space-evenly;
+}
+
+.desc-image {
+  max-height: 50em;
+}
+
+.desc-details-card {
+  display: flex;
+  flex-direction: column;
+  flex-wrap: wrap;
+  /* align-content: space-between; */
+  align-items: flex-start;
+  margin-left: 50px;
+}
+
+.product-details {
+  text-align: initial;
+}
+
+.product-rating {
+  display: flex;
+  align-items: center;
+}
+
+.priceDetail-base-value {
+  float: right;
+  margin-right: 0;
+  margin-left: auto;
+}
+
+.priceDetail-base-row {
+  margin-bottom: 12px;
+  display: flex;
+}
+.priceDetail-card {
+  display: inline-block;
+  color: plum;
+  background-color: black;
+  font-weight: 300;
+  padding: 10px;
+  border-radius: 2px;
+  top: 0;
+}
+
+.checkout-button {
+  cursor: pointer;
+  color: black;
+  background-color: plum;
+  padding: 5px;
+  border-radius: 20px;
+}
+
+.link-checkOut {
+  float: right;
+  padding: 2px;
+  margin: 2px;
+  border: 1px solid;
+  cursor: pointer;
+}
