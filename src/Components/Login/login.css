@@ -1,0 +1,62 @@
+body {
+  background-color: #e3e3e3;
+}
+.username {
+  width: 100%;
+  outline: none;
+  border: none;
+  border-bottom: 1px solid #e3e3e3;
+  margin: 20px 0 4px;
+  padding-bottom: 4px;
+  box-shadow: none;
+  font-size: larger;
+}
+.inputlabel {
+  align-items: normal;
+  display: flex;
+  flex-flow: wrap;
+  margin-bottom: 2em;
+}
+.login-page {
+  background: white;
+  /* display: inline-grid; */
+  /* margin: 56px; */
+  padding: 3em;
+  /* display: flex; */
+  flex-direction: column;
+  background: aliceblue;
+  margin: auto;
+  justify-content: center;
+  display: inline-flex;
+}
+
+.login {
+  margin: auto;
+  display: flex;
+  justify-content: center;
+  flex-wrap: wrap;
+}
+
+.icon-showHide {
+  margin-top: 7px;
+  /* margin: 2px; */
+  display: flex;
+  justify-content: left;
+  margin-inline-start: auto;
+  margin-top: 7px;
+  /* margin: 2px; */
+  display: flex;
+  justify-content: left;
+  margin-inline-start: auto;
+}
+
+.button-signIn {
+  font-size: larger;
+  height: 3em;
+  width: 7em;
+  border-radius: 1.3em;
+  background-color: aliceblue;
+}
+.button-signIn:hover {
+  background-color: #e3e3e3;
+}

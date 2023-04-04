@@ -19,12 +19,12 @@ button {
   color: white;
 }
 
-input {
+/* input {
   margin: 10px;
   border-radius: 20px;
   width: 200px;
   height: 20px;
-}
+} */
 
 ::-webkit-input-placeholder {
   text-align: center;

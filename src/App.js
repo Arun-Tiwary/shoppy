@@ -4,6 +4,7 @@ import CartHome from "./Components/CartHome";
 import Products from "./Components/ProductsPage/productsHome";
 import PriceDetails from "./Components/PriceDetails";
 import WishList from "./Components/WishList";
+import Login from "./Components/Login/login";
 
 function App() {
   return (
@@ -14,6 +15,7 @@ function App() {
         <Route path="/cart" element={<CartHome />} exact />
         <Route path="/checkout" element={<PriceDetails />} exact />
         <Route path="/wishList" element={<WishList />} />
+        <Route path="/login" element={<Login />} />
       </Routes>
     </div>
   );
