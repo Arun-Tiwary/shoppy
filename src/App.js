@@ -16,6 +16,7 @@ function App() {
         <Route path="/checkout" element={<PriceDetails />} exact />
         <Route path="/wishList" element={<WishList />} />
         <Route path="/login" element={<Login />} />
+        <Route path="*" element={<h5>Not found</h5>} />
       </Routes>
     </div>
   );

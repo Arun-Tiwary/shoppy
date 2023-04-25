@@ -1,26 +1,17 @@
-const initalState = [
+const initialState = [
   {
-    username: "Gest",
-    password: "1234",
-  },
-  {
-    username: "Batman",
-    password: "Gotham",
-  },
-  {
-    username: "Iron Man",
-    password: "Miami",
-  },
-  {
-    username: "Spiderman",
-    password: "Queens",
+    username: "",
+    password: "",
   },
 ];
 
-const userDataReducer = (state = initalState, action) => {
+const userDataReducer = (state = initialState, action) => {
   switch (action.type) {
     case "ADD_USER":
       return [...state, action.payload];
+
+    case "LOG_OUT":
+      return [...initialState];
 
     default:
       return state;

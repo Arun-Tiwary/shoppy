@@ -17,6 +17,11 @@ body {
   flex-flow: wrap;
   margin-bottom: 2em;
 }
+.passwordlabel {
+  align-items: normal;
+  display: flex;
+  flex-flow: wrap;
+}
 .login-page {
   background: white;
   /* display: inline-grid; */
@@ -59,4 +64,11 @@ body {
 }
 .button-signIn:hover {
   background-color: #e3e3e3;
+}
+
+.credentials {
+  cursor: pointer;
+  display: flex;
+  margin: 0px 0px 32px 0px;
+  color: blue;
 }
