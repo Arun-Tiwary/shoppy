@@ -64,8 +64,8 @@ const Products = () => {
 
   //const myProducts = filterdProducts();
   console.log("ourProduct", ourProduct);
-  console.log("USerData", userData);
-  console.log("USerData.userName", userData.username);
+  // console.log("USerData", userData);
+  // console.log("USerData.username", userData.username);
   //console.log("myProducts", myProducts);
   console.log("Value in Cart", cart);
   console.log("value in product", product);
@@ -104,7 +104,8 @@ const Products = () => {
             <div className="homeNav-routes">
               <Link
                 style={{}}
-                to={userData.find((user) => user.username) ? "/cart" : "/login"}
+                // to={userData.find((user) => user.username) ? "/cart" : "/login"}
+                to={userData.username ? "/cart" : "/login"}
               >
                 {cart.length > 0 && <i className="cart-icon">{cart.length}</i>}
 
@@ -112,29 +113,41 @@ const Products = () => {
               </Link>{" "}
               <Link
                 style={{}}
-                to={
-                  userData.find((user) => user.username)
-                    ? "/wishList"
-                    : "/login"
-                }
+                to={userData.username ? "/wishList" : "/login"}
+                // to={
+                //   userData.find((user) => user.username)
+                //     ? "/wishList"
+                //     : "/login"
+                // }
               >
                 <AiOutlineHeart size={"3em"} />
               </Link>{" "}
               <label className="icon-account">
                 <MdOutlineAccountCircle size={"3em"} />
-                <ul className="dropdown">
-                  <li className="dropdown-list-item">{userData.username}</li>
-                  <li className="dropdown-list-item">{"Account Settings"}</li>
-                  <li
-                    className="dropdown-list-item"
-                    onClick={() => {
-                      dispatch({ type: "LOG_OUT" });
-                      navigate("/login");
-                    }}
-                  >
-                    <span style={{ color: "red" }}>Logout</span>
-                  </li>
-                </ul>
+                {userData.username ? (
+                  <>
+                    {" "}
+                    <ul className="dropdown">
+                      <li className="dropdown-list-item">
+                        {userData.username}
+                      </li>
+                      <li className="dropdown-list-item">
+                        {"Account Settings"}
+                      </li>
+                      <li
+                        className="dropdown-list-item"
+                        onClick={() => {
+                          dispatch({ type: "LOG_OUT" });
+                          navigate("/login");
+                        }}
+                      >
+                        <span style={{ color: "red" }}>Logout</span>
+                      </li>
+                    </ul>
+                  </>
+                ) : (
+                  ""
+                )}
               </label>
             </div>
           </section>

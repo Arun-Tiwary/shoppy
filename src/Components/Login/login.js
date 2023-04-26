@@ -20,19 +20,20 @@ const Login = () => {
   const navigate = useNavigate();
 
   const handleLoginSubmit = (e) => {
+    e.preventDefault();
     if (userDatabase.find((user) => user.username === username)) {
-      if (state.find((user) => user.username !== username)) {
-        if (userDatabase.find((user) => user.password === password)) {
-          alert("YOU ARE LOGGED IN");
-          dispatch({
-            type: "ADD_USER",
-            payload: { username: username, password: password },
-          });
-          // <Navigate to="/products" replace={true} />;
-          cart.length >= 1 ? navigate("/cart") : navigate("/products");
-        } else {
-          alert("PASSWORD IS WRONG");
-        }
+      //if (state.find((user) => user.username !== username)) {
+      // if (state.username !== username) {
+      if (userDatabase.find((user) => user.password === password)) {
+        alert("YOU ARE LOGGED IN");
+        dispatch({
+          type: "ADD_USER",
+          payload: { username: username, password: password },
+        });
+        //<Navigate to="/products" replace={true} />;
+        cart.length >= 1 ? navigate("/cart") : navigate("/products");
+      } else {
+        alert("PASSWORD IS WRONG");
       }
     } else {
       alert("WRONG USERNAME");
